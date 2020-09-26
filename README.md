@@ -1,10 +1,7 @@
 # JsonToExcel
 
 **JsonToExcel is a package which converts complex, nested json to excel.**
-
-To install dependencies
-
-`pip install -r requirements.txt`
+Available at https://pypi.org/project/jsontoexcel
 
 ### Initialisiation:
   To create an excel file with given name.
