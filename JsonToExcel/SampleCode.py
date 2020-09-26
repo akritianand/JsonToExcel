@@ -1,7 +1,6 @@
-import jsontoexcel
-import json
+from jsontoexcel import JsonToExcel
 
-workbook=jsontoexcel("example_jsontoexcel")
+workbook=JsonToExcel("example_jsontoexcel")
 
 data = json.dumps([
     {
