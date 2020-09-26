@@ -67,7 +67,7 @@ To install dependencies
 
 Output
 
-![alt text](https://github.com/akritianand/JsonToExcel/blob/master/SampleOutput.png "Output")
+![alt text](https://github.com/akritianand/JsonToExcel/blob/master/JsonToExcel/SampleOutput.png "Output")
 
 ## FAQs
 
