@@ -1,29 +1,9 @@
-# JsonToExcel
+from jsontoexcel import json2excel
+import json
 
-**JsonToExcel is a package which converts complex, nested json to excel.**
+workbook=json2excel("example_jsontoexcel")
 
-To install dependencies
-
-`pip install -r requirements.txt`
-
-### Initialisiation:
-  To create an excel file with given name.
-
-  `<workbook instance> =json2excel(<filename in quotes>)`
-
-### Create workesheet:
-  To create a sheet in the above excel workbook.
-
-  `<worksheet instance> = createSheet(<sheetname in quotes>, <json data>)`
-
-### Close workbook:
-  `<workbook instance>.closeWorkbook()`
-
-## Example
-  Json data:
-
-  ```json
-  [
+data = json.dumps([
     {
         "name": "Mary",
         "age": 21,
@@ -62,7 +42,8 @@ To install dependencies
         ],
         "graduated": False
     }
-]
-```
+])
 
-Output
+
+workbook.createSheet("sheet1", data)
+workbook.closeWorkbook()
