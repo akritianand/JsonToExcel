@@ -66,3 +66,10 @@ To install dependencies
 ```
 
 Output
+
+![alt text](https://github.com/akritianand/JsonToExcel/blob/master/SampleOutput.png "Output")
+
+## FAQs
+
+1. Use True/False instead of true/false in json input data.
+2. Heading is only 1 line with each layer key appended to it.
