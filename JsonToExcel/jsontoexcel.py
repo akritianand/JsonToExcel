@@ -6,11 +6,17 @@ class JsonToExcel:
     excelsheet = {}
 
     def __init__(self, filename):
-        self.excelbook = xlsxwriter.Workbook(filename+".xlsx")
+        self.excelbook = xlsxwriter.Workbook(filename + ".xlsx")
 
     def createSheet(self, sheetname, jsonData):
         self.excelsheet[sheetname] = self.excelbook.add_worksheet(sheetname)
-        data = json.loads(jsonData)
+        
+        # Check if jsonData is already a Python object (list or dict)
+        if isinstance(jsonData, (list, dict)):
+            data = jsonData  # Use it directly if it's already a list or dict
+        else:
+            # Otherwise, load it from a JSON string
+            data = json.loads(jsonData)  # This will work if jsonData is a string
 
         writeToSheet(self.excelsheet[sheetname], self.excelbook, 0, 1, data, "", 1)
         return self.excelsheet[sheetname]
@@ -20,9 +26,6 @@ class JsonToExcel:
 
     def closeWorkbook(self):
         self.excelbook.close()
-
-
-
 
 def writeToSheet(worksheet, workbook, col, row, data, header, maxRow):
 
