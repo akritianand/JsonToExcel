@@ -1,3 +1,16 @@
+To run an adhoc conversion from `data.json` to `data.xlsx`:
+```
+git clone https://github.com/cbugk/JsonToExcel
+```
+
+```
+cd JsonToExcel/JsonToExcel/
+# cp /path/to/data.json ./ # copy your json file beside convert_data.py
+python3 ./convert_data.py
+```
+
+---
+
 # JsonToExcel
 
 **JsonToExcel is a package which converts complex, nested json to excel.**
